@@ -1,0 +1,65 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1595769816263-9b910be24d5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=879&q=80);">
+  <div class="container">
+    <h1 class="title">Cineworld</h1>
+    <p>Do your custom WatchLists!</p>
+    <%= link_to "Apply Now", new_list_path, class:"btn btn-flat" %>
+  </div>
+</div>
+
+
+<div class="container">
+  <div><h1>Suas Listas</h1></div>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="card-trip col-2">
+        <img src="https://4.bp.blogspot.com/-wgOVI0DDmF0/V1YUZqD2J9I/AAAAAAACeWg/PBjQaPkboo0PjL12foBd3Qx7y-seQlJfwCLcB/s1600/cartazes%2Bde%2Bcinema%2Bincr%25C3%25ADveis_designinnova%2B%25281%2529.jpg" />
+        <div class="card-trip-infos">
+          <div class="text-center">
+            <h2><%= link_to list.name, list_path(list) %></h2>
+            <%= link_to list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+              <i class="fa-solid fa-trash" style="color: red"></i>
+            <% end %>
+            <p>Short description here!</p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= link_to "Criar Nova Lista", new_list_path %>

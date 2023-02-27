@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div {
+  text-align: center;
+}
+
+.container h1 {
+  font-family: $title-font;
+  font-size: $font-size-base * 5;
+}
+
+a {
+  text-decoration: none;
+}
