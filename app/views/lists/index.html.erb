@@ -12,7 +12,7 @@
   <div class="row">
     <% @lists.each do |list| %>
       <div class="card-trip col-2">
-        <%= cl_image_tag list.photo.key, crop: :fill %>
+        <%= cl_image_tag list.photo.key %>
         <div class="card-trip-infos">
           <div class="text-center">
             <h2><%= link_to list.name, list_path(list) %></h2>
