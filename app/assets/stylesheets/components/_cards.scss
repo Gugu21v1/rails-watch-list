@@ -4,8 +4,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 8px 8px;
-  min-height: 235px;
-  min-width: 100px;
+  min-width: 210px;
 }
 
 .row {
@@ -22,8 +21,8 @@
 }
 
 .card-trip > img {
-  height: 200px;
   width: 100%;
+  min-height: 160px;
 }
 
 .card-trip h2 {
@@ -45,4 +44,20 @@
 
 .card-trip .card-trip-infos {
   padding: 8px;
+}
+
+.my-card {
+  border-radius: 30px;
+  padding: 7px 8px;
+  box-shadow: 3px 2px 2px grey;
+  border: 1px solid black;
+  max-width: 400px;
+
+  input {
+    border-radius: 15px;
+  }
+}
+
+.distancia-top {
+  margin-top: 100px;
 }

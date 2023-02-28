@@ -1,8 +1,20 @@
-<h1>Bookmarks#new</h1>
-<p>Find me in app/views/bookmarks/new.html.erb</p>
+<style>
+  .navbar-lewagon {
+    background: black;
+  }
+</style>
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.submit %>
-<% end %>
+<div class="container my-card text-center">
+  <h1>New Bookmark</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <div class="button-create-list"><%= f.submit %></div>
+  <% end %>
+</div>
+
+<script>
+  let navbar = document.querySelector('.fixed-top')
+  navbar.classList.remove('fixed-top')
+  navbar.classList.add('mb-5')
+</script>

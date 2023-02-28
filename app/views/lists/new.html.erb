@@ -1,8 +1,18 @@
-<h1>Lists#new</h1>
-<p>Find me in app/views/lists/new.html.erb</p>
+<style>
+  .navbar-lewagon {
+    background: black;
+  }
+</style>
 
-<%= render "form", list: @list %>
+<div class="container my-card text-center distancia-top">
+  <h1>New List</h1>
+  <%= render "form", list: @list %>
+  <div><%= link_to "Back", lists_path, class:"btn btn-flat mt-4" %></div>
+</div>
 
-<br>
-<br>
-<%= link_to "Back", lists_path %>
+
+<script>
+  let a = document.querySelector('.fixed-top')
+  a.classList.remove('fixed-top')
+  a.classList.add('mb-5')
+</script>

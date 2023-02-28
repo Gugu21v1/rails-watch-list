@@ -1,16 +1,28 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url('<%= cl_image_path @list.photo.key, crop: :fill %>')">
+  <h1 class="title"><%= @list.name %></h1>
 
-<%= @list.name %>
+  <div id='filmes' class="row">
+    <% @list.bookmarks.each do |bookmark| %>
+      <br>
 
-<% @list.bookmarks.each do |bookmark| %>
+      <div class="card-trip col-2">
+        <div class="product-image"><%= image_tag bookmark.movie.poster_url %>
+          <div class="info text-center"><%= bookmark.comment %></div>
+        </div>
+        <%= link_to list_bookmark_path(bookmark.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+          <svg xmlns="http://www.w3.org/2000/svg" color="red" width="25" height="25" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
   <br>
-  <%= bookmark.movie.title %>
-  <%= link_to "Delete", list_bookmark_path(bookmark.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<% end %>
+  <br>
+  <%= link_to "New Bookmark", new_list_bookmark_path(@list), class: "btn btn-gradient"%>
+  <br>
+  <%= link_to "Back", lists_path, class: "btn btn-flat mt-4" %>
 
-<br>
-<br>
-<%= link_to "New Bookmark", new_list_bookmark_path(@list) %>
-
-<%= link_to "Back", lists_path %>
+</div>
