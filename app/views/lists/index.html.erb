@@ -11,6 +11,7 @@
   <div><h1>Your Lists</h1></div>
   <div class="row">
   <%= a = 0 %>
+  <% if @lists %>
     <% @lists.each do |list| %>
       <div class="card-trip col-2">
         <% if list.photo.key %>
@@ -30,6 +31,9 @@
         </div>
       </div>
     <% end %>
+  <% else %>
+    <h1>No Lists</h1>
+  <% end %>
   </div>
 </div>
 <br>
