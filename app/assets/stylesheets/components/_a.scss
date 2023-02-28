@@ -1,0 +1,17 @@
+.container .button {
+  text-decoration: none;
+  background-color: rgba(218, 24, 24, 0.895);
+  padding: 10px 15px;
+  border-radius: 30px;
+  color: rgb(40, 38, 38);
+  font-weight: 600;
+  margin: auto auto;
+  border: 3px solid black;
+  box-shadow: 4px 3px 3px grey;
+  transition: ease 0.5s all;
+}
+
+.button:hover {
+  scale: 1.2;
+  background-color: rgba(218, 166, 24, 0.895);
+}

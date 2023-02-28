@@ -4,6 +4,8 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 8px 8px;
+  min-height: 235px;
+  min-width: 100px;
 }
 
 .row {
@@ -42,5 +44,5 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 8px;
 }
