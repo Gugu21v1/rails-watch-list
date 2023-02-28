@@ -10,9 +10,15 @@
 <div class="container mt-4">
   <div><h1>Your Lists</h1></div>
   <div class="row">
+  <%= a = 0 %>
     <% @lists.each do |list| %>
       <div class="card-trip col-2">
-        <%= cl_image_tag list.photo.key %>
+        <% if list.photo.key %>
+          <%= cl_image_tag list.photo.key %>
+        <% else %>
+          <% a += 1 %>
+          <h1><%= a %></h1>
+        <% end %>
         <div class="card-trip-infos">
           <div class="text-center">
             <h2><%= link_to list.name, list_path(list) %></h2>
