@@ -10,7 +10,6 @@
 <div class="container mt-4">
   <div><h1>Your Lists</h1></div>
   <div class="row">
-    <% a = 0 %>
     <% @lists.each do |list| %>
       <div class="card-trip col-2">
         <%= cl_image_tag list.photo.key, crop: :fill %>
